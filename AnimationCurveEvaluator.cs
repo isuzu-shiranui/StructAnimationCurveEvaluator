@@ -13,6 +13,7 @@ public struct AnimationCurveEvaluator : IDisposable
         this.curve = new NativeArray<Keyframe>(animationCurve.keys, Allocator.Persistent);
     }
 
+    // https://forum.unity.com/threads/need-way-to-evaluate-animationcurve-in-the-job.532149/
     public float Evaluate(float time)
     {
         float value = 0;
